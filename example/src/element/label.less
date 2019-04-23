@@ -1,0 +1,40 @@
+  label{
+    flex: none;
+    width: var(--wd-m);
+    text-align: center;
+    &[switch] {
+      cursor: pointer;
+      height: var(--ht-s);
+      width: var(--wd-s);
+      border-radius: var(--radius-l);
+
+      svg {
+        &:extend(.in-pop);
+        &:last-child {
+          background-color: var(--cl-theme);
+          color: white;
+          fill: white;
+          display: none;
+        }
+        &:first-child {
+          display: inline-block;
+        }
+      }
+      &[checked] {
+        svg:first-child {
+          display: none;
+        }
+        svg:last-child {
+          display: inline-block;
+        }
+      }
+    }
+    &[on] {
+      color: var(--cl-theme);
+      fill: var(--cl-theme);
+    }
+    &[off] {
+      color: var(--cl-700);
+      fill: var(--cl-700);
+    }
+  }

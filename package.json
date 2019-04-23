@@ -1,0 +1,19 @@
+{
+  "name": "paratag",
+  "version": "1.0.0",
+  "description": "compose your website without stylesheet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timAnim/paratag.git"
+  },
+  "author": "timchen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timAnim/paratag/issues"
+  },
+  "homepage": "https://github.com/timAnim/paratag#readme"
+}

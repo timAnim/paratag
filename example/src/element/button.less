@@ -1,0 +1,69 @@
+button{
+  &:extend(.blink-wave all);
+  height: var(--ht-s);
+  width: var(--wd-l);
+  cursor: pointer;
+  border-radius: var(--radius-s);
+  fill: var(--cl-700);
+  color: var(--cl-700);
+  font-size: var(--fs-m);
+  transition: color 0.2s ease;
+  &[disabled] {
+    color: var(--cl-400);
+  }
+  &[notice]:after {
+    content: attr(notice);
+    height: var(--ht-xs);
+    width: var(--wd-xs);
+    border-radius: var(--radius-l);
+    position: absolute;
+    left: var(--pd-s);
+    top: var(--pd-s);
+    background-color: var(--cl-alert);
+  }
+
+  &[type=circle-s] {
+    width: var(--wd-s);
+    border-radius: var(--radius-l);
+    &:hover {
+      color: black;
+      fill: black;
+    }
+  }
+  &[type=circle-m] {
+    width: var(--wd-m);
+    height: var(--ht-m);
+    border-radius: var(--radius-l);
+    &:hover {
+      color: black;
+      fill: black;
+    }
+  }
+  &[type=square-s] {
+    width: var(--wd-s);
+  }
+  &[type=square-m] {
+    width: var(--wd-m);
+    height: var(--ht-m);
+  }
+  &[type=full] {
+    width: 100%;
+  }
+  &[type=half] {
+    width: 50%;
+  }
+  &[type=float] {
+    text-align: center;
+    height: var(--ht-l);
+    width: var(--wd-l);
+    border-radius: var(--radius-l);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: var(--cl-theme);
+    box-shadow: var(--shadow-l);
+    margin: var(--pd-m);
+    color: var(--cl-white);
+    z-index: 100;
+  }
+}

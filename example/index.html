@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang='ch'>
+
+<head>
+  <meta charset="utf-8">
+  <title>paratag</title>
+  <link rel="stylesheet/less" type="text/css" href="./src/paratag.less">
+  <link rel="stylesheet" type="text/css" href="./fonts/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body lang='_pt'>
+  <article id='app'>
+    <li class="sd-black">
+      <div class="pd-m-h">paratag</div>
+      <span class="wd-char-8 fs-s">Timothy Chen</span>
+    </li>
+    <main>
+      <aside :df-state="dfState">
+        <header class="sd-dark">
+          <li>
+            <label>
+              <i class="fa fa-th"></i>
+            </label>
+            <span>paratag</span>
+          </li>
+        </header>
+        <li>
+          <label>
+            <i class="fa fa-th"></i>
+          </label>
+          <a href='#startup'>介绍</a>
+        </li>
+        <li>
+          <label>
+            <i class="fa fa-th"></i>
+          </label>
+          <a href='#startup'>起步</a>
+        </li>
+        <li>
+          <label>
+            <i class="fa fa-th"></i>
+          </label>
+          <a href='#params'>参数配置</a>
+        </li>
+        <li>
+          <label>
+            <i class="fa fa-th"></i>
+          </label>
+          <a href='#params'>布局标签</a>
+        </li>
+        <li>
+          <label>
+            <i class="fa fa-th"></i>
+          </label>
+          <a href='#params'>元素标签</a>
+        </li>
+        <li>
+          <label>
+            <i class="fa fa-th"></i>
+          </label>
+          <a href='#params'>组件标签</a>
+        </li>
+        <li>
+          <label>
+            <i class="fa fa-th"></i>
+          </label>
+          <a href='#params'>动画</a>
+        </li>
+      </aside>
+      <article>
+        <header>
+          <li class="pd-m-h">
+            <button type='circle-m' @click="toggle">
+              <i class="fa fa-bars fs-l"></i>
+            </button>
+            <h1 class="pd-m-h">参数化设计</h1>
+            <button class="sd-theme">
+              <i class="fa fa-download"></i>
+            </button>
+          </li>
+          <section>
+            <li class="pd-m-h">
+              <div class="cl-sec fs-s">配置参数</div>
+              <button @click='showPanel=!showPanel'>{{ showPanel ? "收缩":"展开" }}</button>
+            </li>
+            <div class="pd-m bg-light" v-if='showPanel'>
+              <h2>颜色</h2>
+              <li class="ht-s">
+                <span class="pd-m-h">主题色</span>
+                <input type="text" @blur='setPara' para='--cl-theme' value='#8bc34a'>
+                <span class="pd-m-h">阴影色</span>
+                <input type="text" @blur='setPara' para='--shadow-m' value='0 1px 3px  rgba(0, 0, 0, 0.2)'>
+                <span class="pd-m-h">边框色</span>
+                <input type="text" @blur='setPara' para='--border-light' value='1px solid #eeeeee'>
+              </li>
+              <h2>内边距</h2>
+              <li class="ht-s">
+                <span class="pd-m-h">较窄s</span>
+                <input type="text" @blur='setPara' para='--pd-s' value='0.08rem'>
+                <span class="pd-m-h">标准m</span>
+                <input type="text" @blur='setPara' para='--pd-m' value='0.16rem'>
+                <span class="pd-m-h">较宽l</span>
+                <input type="text" @blur='setPara' para='--pd-xs' value='0.32rem'>
+              </li>
+              <h2>行高</h2>
+              <li class="ht-s">
+                  <span class="pd-m-h">矮的s</span>
+                  <input type="text" @blur='setPara' para='--ht-s' value='0.32rem'>
+                  <span class="pd-m-h">标准m</span>
+                  <input type="text" @blur='setPara' para='--ht-m' value='0.4rem'>
+                  <span class="pd-m-h">高的l</span>
+                  <input type="text" @blur='setPara' para='--ht-l' value='0.56rem'>
+                </li>
+            </div>
+          </section>
+        </header>
+        <content>
+          <dl id='intro' class="mg-m-v">
+            <header>
+              <li>
+                <h1 class="pd-m-h">介绍</h1>
+              </li>
+            </header>
+            <ol>
+              <div class="pd-m lay-h">
+                <span class="wd-xl align-c fs-xl">
+                  <i class="fa fa-th"></i>
+                </span>
+                <span>
+                  <h1 class="ht-m">参数化设计</h1>
+                  <p class="cl-sec">参数化设计</p>
+                </span>
+              </div>
+              <div class="pd-m lay-h">
+                <span class="wd-xl align-c fs-xl">
+                  <i class="fa fa-th"></i>
+                </span>
+                <div>
+                  <h1 class="ht-m">无css开发</h1>
+                  <p class="cl-sec">参数化设计</p>
+                </div>
+              </div>
+              <div class="pd-m lay-h">
+                <label class="wd-xl fs-xl">
+                  <i class="fa fa-th"></i>
+                </label>
+                <div>
+                  <h1 class="ht-m">语义化标签语法糖</h1>
+                  <p class="cl-sec">参数化设计</p>
+                </div>
+              </div>
+            </ol>
+          </dl>
+          <dl id='startup' class="mg-m-v">
+            <header>
+              <li>
+                <h1 class="pd-m-h">起步</h1>
+              </li>
+            </header>
+            <div class="pd-m">
+              <h2>通过npm安装</h2>
+              <div class="pd-m sd-dark">
+                <code>npm install paratag --save</code>
+              </div>
+            </div>
+            <div class="pd-m">
+              <h2>直接引入</h2>
+              <div class="pd-m sd-dark">
+                <code>
+                  &lt; link rel="stylesheet" type="text/css" href="../lib/paratag.css" &gt;
+                </code>
+              </div>
+            </div>
+            <div class="pd-m">
+              <h2>下载css文件</h2>
+              <ul type='column-2'>
+                <span class="sd-cut pd-m">
+                  <p class="ht-m cl-sec">只使用参数化部分, 不包含标签的语法糖</p>
+                  <button type='full' class="sd-theme ht-m">
+                    <i class="fa fa-download"></i>
+                    <span class="pd-s-h">paratag.css</span>
+                  </button>
+                </span>
+                <span class="sd-cut pd-m">
+                  <p class="ht-m cl-sec">使用全部标签的语法糖和参数化类名</p>
+                  <button type='full' class="sd-theme ht-m">
+                    <i class="fa fa-download"></i>
+                    <span class="pd-s-h">paratag.lite.css</span>
+                  </button>
+                </span>
+              </ul>
+            </div>
+          </dl>
+          <dl id='params'>
+            <header>
+              <li class="pd-m-h">
+                <h1>参数配置</h1>
+              </li>
+            </header>
+            <ol class="pd-m">
+              <li>宽度</li>
+              <li>高度</li>
+              <li>边距</li>
+              <li>间隙</li>
+              <li>渲染</li>
+              <li>布局</li>
+              <li>阴影</li>
+            </ol>
+          </dl>
+          <li>
+            <h2>布局标签</h2>
+          </li>
+          <ul type='column-2'>
+            <dl>
+              <header type='inner'>
+                <li class="pd-s-h">
+                  <h1>article</h1>
+                </li>
+              </header>
+              <ol type='compact'>
+                <li>lay-v</li>
+                <li>bg-light</li>
+              </ol>
+            </dl>
+            <dl>
+              <header type='inner'>
+                <li class="pd-s-h">
+                  <h1>main</h1>
+                </li>
+              </header>
+              <ol type='compact'>
+                <li>lay-h</li>
+                <li>ht-max</li>
+              </ol>
+            </dl>
+            <dl>
+              <header type='inner'>
+                <li class="pd-s-h">
+                  <h1>ol</h1>
+                </li>
+              </header>
+              <ol type='compact'>
+                <li>sd-list</li>
+                <li>bg-white</li>
+                <li>pd-m</li>
+              </ol>
+            </dl>
+            <dl>
+              <header type='inner'>
+                <li class="pd-s-h">
+                  <h1>li</h1>
+                </li>
+              </header>
+              <ol type='compact'>
+                <li>lay-h</li>
+                <li>li>span wd-fix</li>
+                <li>li>div wd-auto</li>
+              </ol>
+            </dl>
+            <dl>
+              <header type='inner'>
+                <li class="pd-s-h">
+                  <h1>dl</h1>
+                </li>
+              </header>
+              <ol type='compact'>
+                <li>sd-card</li>
+                <li>bg-white</li>
+              </ol>
+            </dl>
+            <dl>
+              <header type='inner'>
+                <li class="pd-s-h">
+                  <h1>ul</h1>
+                </li>
+              </header>
+              <ol type='compact'>
+                <li>lay-h</li>
+                <li>ul>* width:19%</li>
+                <li>type=['compact','expand']</li>
+              </ol>
+            </dl>
+          </ul>
+          <li>
+            <h2>元素标签</h2>
+          </li>
+        </content>
+      </article>
+    </main>
+  </article>
+  <script>
+    less = {
+      env: "development",
+      async: false,
+      fileAsync: false,
+      poll: 1000,
+      functions: {},
+      dumpLineNumbers: "comments",
+      relativeUrls: false,
+    }
+  </script>
+  <script src="./js/less.js" type="text/javascript"></script>
+  <script src="./js/vue.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var vm = new Vue({
+      el:'#app',
+      data(){
+        return{
+          dfState:'on',
+          showPanel:true,
+        }
+      },
+      methods:{
+        toggle(){
+          this.dfState = this.dfState === 'off' ? 'on' : 'off';
+        },
+        setPara(e){
+          var para = e.target.getAttribute('para')
+          var val = e.target.value
+          document.body.style.setProperty(para,val)
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

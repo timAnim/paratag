@@ -1,0 +1,17 @@
+.toast {
+  &:extend(.in-rotate all);
+  font-size: var(--fs-s);
+  width: var(--wd-panel);
+  height: var(--ht-m);
+  line-height: var(--ht-m);
+  position: absolute;
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  margin-left: calc(0 - var(--wd-xl)/2);
+  margin-top: calc(0 - var(--ht-m)/2);
+  background-color: var(--cl-mask);
+  border-radius: calc(var(--ht-m)/2);
+  color: white;
+  text-align: center;
+}

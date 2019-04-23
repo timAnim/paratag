@@ -1,0 +1,34 @@
+h1 {
+  font-size: var(--fs-l);
+}
+
+h2 {
+  height: var(--ht-m);
+  line-height: var(--ht-l);
+  color: var(--cl-700);
+  fill: var(--cl-700);
+  padding: 0 var(--pd-m);
+}
+
+h3 {
+  height: var(--ht-x)s;
+  .phone({
+    display: none;
+  });
+}
+
+a,
+em,
+pre,
+h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+pre {
+  color: var(--cl-500);
+  fill: var(--cl-500);
+  text-indent: var(--pd-s);
+  text-align: right;
+}

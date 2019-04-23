@@ -1,0 +1,16 @@
+dl {
+  box-shadow: var(--shadow-m);
+  border-radius: var(--radius-s);
+  overflow: hidden;
+  background-color: white;
+  &[type=compact] {
+    li {
+      height: var(--ht-s);
+    }
+  }
+  &[type=expand] {
+    li {
+      height: var(--ht-l);
+    }
+  }
+}
